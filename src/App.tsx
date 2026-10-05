@@ -379,7 +379,7 @@ export default function App() {
               >
                 <div className="w-full h-auto rounded-[8px] overflow-hidden relative shadow-[0_30px_60px_rgba(39,39,39,0.15)] transition-transform duration-700 bg-white border border-[#272727]/5 group-hover:scale-[1.02]">
                   <img 
-                    src={`/Images/0${num}.png`} 
+                    src={num === 1 ? `/Images/01 updated.png` : `/Images/0${num}.png`} 
                     alt={`Menu Page ${num}`} 
                     className="w-full h-auto object-contain block"
                   />
@@ -391,90 +391,108 @@ export default function App() {
         </section>
 
         {/* ======================= END SECTION ======================= */}
-        <section id="end-section" className="w-full min-h-screen flex flex-col justify-start items-center relative bg-[#FFFFF0] overflow-hidden z-30 shadow-[0_-20px_50px_rgba(0,0,0,0.05)] border-t border-[#272727]/5" style={{ backgroundImage: "url('/Images/Thank you bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <section id="end-section" className="w-full h-[100dvh] min-h-[600px] flex flex-col justify-between items-center relative overflow-hidden z-30 shadow-[0_-20px_50px_rgba(0,0,0,0.05)] border-t border-[#272727]/5 bg-[#111]">
           
-          {/* Unique Footer 3D Background */}
-          {/* <div className="absolute inset-0 z-0 pointer-events-none">
-            <EndScene3D />
-          </div> */}
+          {/* Video Background */}
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className="absolute inset-0 w-full h-full object-cover z-0"
+            src="/Images/bg video brown sugar caffe End.mp4"
+          />
 
-          {/* Top Spacer */}
-          <div className="w-full h-[30vh] md:h-[35vh] z-10 shrink-0"></div>
+          {/* Dark Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
+
+          {/* Flexible top spacer */}
+          <div className="flex-[0.8] w-full z-10 pointer-events-none"></div>
 
           {/* Center Content */}
-          <div className="flex flex-col items-center text-center z-10 w-full px-8 shrink-0">
+          <div className="flex flex-col items-center justify-center text-center z-10 w-full px-6 shrink-0 transform scale-[0.98] md:scale-100 origin-center">
             <img 
               src="/Images/bg original.png" 
               alt="Logo" 
-              className="w-48 md:w-64 mb-10" 
+              className="w-44 md:w-64 mb-6 md:mb-8 drop-shadow-2xl" 
             />
 
-            <h2 className="font-serif text-[4rem] md:text-[7rem] leading-[0.9] text-[#272727] font-medium tracking-wide mb-6">
+            <h2 className="font-serif text-[3.5rem] md:text-[6.5rem] leading-[0.9] text-[#FFFFF0] font-medium tracking-wide mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.3)]">
               THANK<br/>
-              <span className="text-[#CC5641]">YOU</span>
+              <span className="text-[#b35c39]">YOU</span>
             </h2>
             
-            <p className="font-sans text-[#272727] tracking-[0.2em] text-[0.65rem] md:text-[0.75rem] uppercase leading-relaxed max-w-[300px] md:max-w-md font-bold bg-[#FFFFF0]/70 backdrop-blur-md px-6 py-3 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-[#FFFFF0]/50">
-              We hope you enjoyed your fusion experience.
+            <p className="font-sans text-[#FFFFF0] tracking-[0.2em] text-[0.65rem] md:text-[0.75rem] uppercase leading-relaxed max-w-[300px] md:max-w-md font-bold bg-[#1a1412]/60 backdrop-blur-md px-6 py-4 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#FFFFF0]/10">
+              We hope you enjoyed your <span className="text-[#b35c39] drop-shadow-lg">fusion experience.</span>
             </p>
 
-            <div className="mt-6 flex flex-col items-center gap-2 font-sans text-[#272727] tracking-[0.1em] text-[0.6rem] md:text-[0.7rem] leading-relaxed text-center font-bold bg-[#FFFFF0]/70 backdrop-blur-md px-6 py-4 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-[#FFFFF0]/50 max-w-[90%] md:max-w-md">
-              <div className="flex flex-col items-center justify-center gap-1 mb-2">
-                <span className="uppercase tracking-[0.15em] text-[#272727]">Datta Prime Business Centre</span>
-                <span className="uppercase text-[#272727]/80 font-medium">Beside Dominos, Mulgund Road, Gadag</span>
+            <div className="mt-5 flex flex-col items-center gap-2 font-sans text-[#FFFFF0] tracking-[0.1em] text-[0.6rem] md:text-[0.7rem] leading-relaxed text-center font-bold bg-[#1a1412]/60 backdrop-blur-md px-6 py-5 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#FFFFF0]/10 max-w-[90%] md:max-w-md">
+              <div className="flex flex-col items-center justify-center gap-1 mb-1">
+                <span className="uppercase tracking-[0.15em] text-[#b35c39] font-extrabold drop-shadow-lg">Datta Prime Business Centre</span>
+                <span className="uppercase text-[#FFFFF0]/90 font-medium">Beside Dominos, Mulgund Road, Gadag</span>
               </div>
-              <div className="flex items-center justify-center gap-2 text-[#CC5641]">
-                <Phone size={12} />
-                <span className="text-[#272727]">8884909098, 9886031113</span>
+              <div className="flex items-center justify-center gap-2 text-[#b35c39] mt-2">
+                <Phone size={14} className="drop-shadow-lg" />
+                <span className="text-[#FFFFF0] font-black text-[0.85rem] md:text-[1.1rem] tracking-[0.15em] drop-shadow-lg">8884909098, 9886031113</span>
               </div>
             </div>
             
-            <div className="mt-12 flex flex-col items-center gap-8">
+            <div className="mt-8 flex flex-col items-center gap-5">
               <a 
                 href="https://www.instagram.com/brownsugarfusioncafe/?hl=en" 
                 target="_blank" 
                 rel="noreferrer"
-                className="flex items-center gap-3 text-[#272727] hover:text-[#CC5641] transition-colors duration-300 group bg-[#FFFFF0]/70 backdrop-blur-md px-6 py-2 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-[#FFFFF0]/50"
+                className="flex items-center gap-3 text-[#FFFFF0] hover:text-[#FFFFF0] transition-colors duration-300 group bg-[#1a1412]/60 backdrop-blur-md px-6 py-2 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#b35c39]/30 hover:border-[#b35c39]/80"
               >
-                <div className="p-2 border border-[#272727]/20 rounded-full group-hover:border-[#CC5641] transition-colors duration-300 bg-white/50">
+                <div className="p-1.5 border border-[#b35c39]/60 rounded-full group-hover:border-[#b35c39] transition-colors duration-300 bg-[#b35c39]/20 text-[#b35c39] group-hover:bg-[#b35c39] group-hover:text-[#FFFFF0] drop-shadow-md">
                   <InstagramIcon />
                 </div>
-                <span className="font-sans tracking-[0.15em] text-[0.7rem] uppercase font-bold">Follow Us on Instagram</span>
+                <span className="font-sans tracking-[0.15em] text-[0.6rem] md:text-[0.7rem] uppercase font-bold">
+                  Follow Us on <span className="text-[#b35c39] font-black drop-shadow-md group-hover:text-[#FFFFF0] transition-colors duration-300">Instagram</span>
+                </span>
               </a>
 
               <button 
                 onClick={scrollToTop}
-                className="mt-4 bg-[#272727] text-[#FFFFF0] px-8 py-3 rounded-full flex items-center gap-2 hover:bg-[#111] transition-all duration-300 shadow-xl shadow-black/10 active:scale-95 font-bold"
+                className="bg-[#1a1412] text-[#FFFFF0] px-6 py-2.5 rounded-full flex items-center gap-2 hover:bg-[#b35c39] transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.3)] active:scale-95 font-bold border border-[#FFFFF0]/10"
               >
-                <ArrowLeft size={14} className="rotate-90" />
-                <span className="font-sans tracking-[0.15em] text-[0.7rem] uppercase">Back to Top</span>
+                <ArrowLeft size={12} className="rotate-90" />
+                <span className="font-sans tracking-[0.15em] text-[0.6rem] md:text-[0.7rem] uppercase">Back to Top</span>
               </button>
             </div>
           </div>
 
-          {/* Flex spacer to push footer down */}
-          <div className="flex-1 w-full"></div>
+          {/* Flexible bottom spacer */}
+          <div className="flex-1 w-full z-10 pointer-events-none"></div>
 
           {/* Bottom Credits */}
-          <div className="w-full z-10 border-t border-[#FFFFF0]/10 p-6 flex flex-col lg:flex-row justify-between items-center gap-4 bg-[#272727] shrink-0 font-['Montserrat']">
-            <div className="text-[#FFFFF0]/50 tracking-[0.15em] text-[0.6rem] md:text-[0.65rem] uppercase font-medium">
-              © {new Date().getFullYear()} Brown Sugar Fusion Cafe
+          <div className="w-full z-10 px-4 py-6 md:py-8 flex flex-col lg:flex-row justify-between items-center gap-4 md:gap-8 bg-gradient-to-b from-[#0a0a0a]/90 to-[#000000] shrink-0 font-sans backdrop-blur-2xl relative overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t border-[#FFFFF0]/5">
+            {/* Subtle top glow */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] h-[1px] bg-gradient-to-r from-transparent via-[#b35c39]/50 to-transparent"></div>
+            
+            <div className="text-[#FFFFF0]/40 tracking-[0.25em] text-[0.5rem] md:text-[0.6rem] uppercase font-bold flex items-center gap-2">
+              <span className="text-[#b35c39] text-[0.6rem]">©</span> {new Date().getFullYear()} Brown Sugar Fusion Cafe
             </div>
             
-            <div className="text-[#FFFFF0]/70 tracking-[0.15em] text-[0.6rem] md:text-[0.65rem] uppercase flex flex-col md:flex-row items-center gap-2 md:gap-6 text-center md:text-left font-medium">
-              <span>
-                Designed & Developed by{' '}
+            <div className="text-[#FFFFF0]/50 tracking-[0.2em] text-[0.5rem] md:text-[0.6rem] uppercase flex flex-col md:flex-row items-center gap-3 md:gap-8 text-center font-bold">
+              <span className="flex flex-col md:flex-row items-center gap-1.5 md:gap-2">
+                Designed & Developed by
                 <a 
                   href="https://deepcipher-studio.vercel.app" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="text-[#CC5641] hover:text-white transition-colors font-bold underline underline-offset-4"
+                  className="relative group text-[#FFFFF0] tracking-[0.25em] md:ml-1 mt-0.5 md:mt-0"
                 >
-                  DeepCipher
+                  <span className="relative z-10 group-hover:text-[#b35c39] transition-colors duration-500">DEEPCIPHER</span>
+                  <span className="absolute -bottom-1 left-0 w-full h-[1px] bg-[#b35c39]/30 group-hover:bg-[#b35c39] transition-all duration-500"></span>
+                  <span className="absolute -inset-2 bg-[#b35c39]/0 group-hover:bg-[#b35c39]/10 blur-md rounded-lg transition-all duration-500 -z-10"></span>
                 </a>
               </span>
-              <span className="hidden md:inline text-[#FFFFF0]/20">|</span>
-              <span className="font-semibold text-[#FFFFF0]/90">Agency Contact: +91 9187360830</span>
+              <span className="hidden md:inline w-[3px] h-[3px] rounded-full bg-[#FFFFF0]/20"></span>
+              <span className="flex items-center gap-1.5 md:gap-2">
+                <span className="text-[#FFFFF0]/30 tracking-[0.2em]">Agency Contact</span> 
+                <span className="text-[#b35c39] tracking-[0.15em] ml-0.5 drop-shadow-md">+91 9187360830</span>
+              </span>
             </div>
           </div>
         </section>
@@ -515,7 +533,7 @@ export default function App() {
                   <SwiperSlide key={num} className="box-border w-full h-full overflow-y-auto overflow-x-hidden px-12 md:px-24 py-20">
                     <div className="w-full min-h-full flex flex-col items-center justify-center">
                       <img 
-                        src={`/Images/0${num}.png`} 
+                        src={num === 1 ? `/Images/01 updated.png` : `/Images/0${num}.png`} 
                         alt={`Menu Page ${num}`} 
                         className="w-full h-auto max-w-full md:max-w-3xl mx-auto drop-shadow-2xl rounded-sm"
                       />
