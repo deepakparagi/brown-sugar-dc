@@ -37,21 +37,23 @@ function HangingLamp({ position }: any) {
 // 2. Slatted Wall (Terracotta)
 function SlattedWall({ position, rotation, scale }: any) {
   return (
-    <group position={position} rotation={rotation} scale={scale}>
-      {[0, 1, 2, 3, 4].map((i) => (
-        <mesh key={i} position={[i * 0.4 - 0.8, 0, 0]} castShadow receiveShadow>
-          <cylinderGeometry args={[0.15, 0.15, 7, 16]} />
-          <meshStandardMaterial color="#9c3d2b" roughness={0.9} />
-        </mesh>
-      ))}
-    </group>
+    <Float speed={2.5} rotationIntensity={0.1} floatIntensity={0.8} floatingRange={[-0.2, 0.2]} position={position}>
+      <group rotation={rotation} scale={scale}>
+        {[0, 1, 2, 3, 4].map((i) => (
+          <mesh key={i} position={[i * 0.4 - 0.8, 0, 0]} castShadow receiveShadow>
+            <cylinderGeometry args={[0.15, 0.15, 7, 16]} />
+            <meshStandardMaterial color="#9c3d2b" roughness={0.9} />
+          </mesh>
+        ))}
+      </group>
+    </Float>
   );
 }
 
 // 3. Background Capsule (Taupe)
 function BackgroundCapsule({ position, scale, rotation }: any) {
   return (
-    <Float speed={1.5} rotationIntensity={0.05} floatIntensity={0.3} position={position}>
+    <Float speed={2} rotationIntensity={0.2} floatIntensity={1} floatingRange={[-0.3, 0.3]} position={position}>
       <mesh scale={scale} rotation={rotation} receiveShadow>
         <capsuleGeometry args={[1, 3, 32, 32]} />
         <meshStandardMaterial color="#8a8177" roughness={0.9} />
@@ -71,7 +73,7 @@ function TexturedSphere({ position, scale }: any) {
     }
   });
   return (
-    <Float speed={1} rotationIntensity={0.1} floatIntensity={0.4} position={position}>
+    <Float speed={3} rotationIntensity={0.5} floatIntensity={2} floatingRange={[-0.5, 0.5]} position={position}>
       <mesh ref={mesh} scale={scale} castShadow receiveShadow>
         <sphereGeometry args={[1, 64, 64]} />
         <meshStandardMaterial color="#2d1712" roughness={1} metalness={0} />
@@ -83,7 +85,7 @@ function TexturedSphere({ position, scale }: any) {
 // 5. Abstract Plant (Dark Green)
 function AbstractPlant({ position, rotation, scale }: any) {
   return (
-    <Float speed={1} rotationIntensity={0.1} floatIntensity={0.2} position={position}>
+    <Float speed={2.5} rotationIntensity={0.4} floatIntensity={1.5} floatingRange={[-0.4, 0.4]} position={position}>
       <group rotation={rotation} scale={scale}>
         {/* Stem */}
         <mesh position={[0, 0, 0]} castShadow>
@@ -285,7 +287,7 @@ export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 1000);
+    }, 50);
     return () => clearTimeout(timer);
   }, []);
 
@@ -492,9 +494,9 @@ export default function App() {
             <div className="absolute top-4 right-4 md:top-8 md:right-8 z-50">
               <button 
                 onClick={() => setLightboxIndex(null)}
-                className="text-[#111111] bg-[#F1EADD] p-3 md:p-4 rounded-full hover:bg-white transition-colors focus:outline-none shadow-2xl"
+                className="text-[#F1EADD]/70 p-2 md:p-4 hover:text-white transition-all focus:outline-none hover:rotate-90 hover:scale-110 duration-500"
               >
-                <X size={24} />
+                <X strokeWidth={1} size={40} />
               </button>
             </div>
             
@@ -509,7 +511,7 @@ export default function App() {
                 className="w-full h-full"
               >
                 {menuImages.map((num) => (
-                  <SwiperSlide key={num} className="box-border w-full h-full overflow-y-auto overflow-x-hidden px-0 md:px-12 py-20">
+                  <SwiperSlide key={num} className="box-border w-full h-full overflow-y-auto overflow-x-hidden px-12 md:px-24 py-20">
                     <div className="w-full min-h-full flex flex-col items-center justify-center">
                       <img 
                         src={`/Images/0${num}.png`} 
@@ -525,33 +527,37 @@ export default function App() {
             {/* Swiper Custom CSS overrides for Lightbox */}
             <style>{`
               .swiper-button-next, .swiper-button-prev {
-                color: #111111 !important;
-                background: rgba(241, 234, 221, 0.8) !important;
-                backdrop-filter: blur(8px);
-                width: 46px !important;
-                height: 46px !important;
-                border-radius: 50% !important;
-                box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-                top: auto !important;
-                bottom: 16px !important;
+                color: rgba(241, 234, 221, 0.7) !important;
+                background: transparent !important;
+                backdrop-filter: none;
+                box-shadow: none;
+                border-radius: 0 !important;
+                width: auto !important;
+                height: auto !important;
+                top: 50% !important;
+                bottom: auto !important;
                 margin-top: 0 !important;
+                transform: translateY(-50%) !important;
+                transition: all 0.3s ease;
               }
               .swiper-button-next::after, .swiper-button-prev::after {
-                font-size: 15px !important;
-                font-weight: 900 !important;
+                font-size: 28px !important;
+                font-weight: 300 !important;
               }
-              .swiper-button-prev { left: 16px !important; }
-              .swiper-button-next { right: 16px !important; }
+              .swiper-button-prev { left: 10px !important; }
+              .swiper-button-next { right: 10px !important; }
               .swiper-button-next:hover, .swiper-button-prev:hover {
-                background: #ffffff !important;
+                background: transparent !important;
+                color: #ffffff !important;
+                transform: translateY(-50%) scale(1.2) !important;
               }
               .swiper-pagination-fraction {
-                color: #F1EADD !important;
+                color: rgba(241, 234, 221, 0.5) !important;
                 font-family: var(--font-sans);
-                letter-spacing: 0.2em;
-                font-size: 0.8rem;
+                letter-spacing: 0.3em;
+                font-size: 0.7rem;
                 bottom: 24px !important;
-                font-weight: bold;
+                font-weight: 400;
               }
             `}</style>
           </motion.div>
