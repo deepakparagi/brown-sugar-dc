@@ -331,6 +331,7 @@ export default function App() {
         <section id="home-section" className="w-full min-h-screen relative bg-[#FFFFF0] overflow-hidden z-20 cursor-pointer" onClick={scrollToMenu}>
           
           {/* Video Background */}
+          {/* @ts-ignore: defaultMuted is not in standard React types but is required for iOS Safari auto-play */}
           <video 
             autoPlay 
             loop 
@@ -395,6 +396,7 @@ export default function App() {
         <section id="end-section" className="w-full h-[100dvh] min-h-[600px] flex flex-col justify-between items-center relative overflow-hidden z-30 shadow-[0_-20px_50px_rgba(0,0,0,0.05)] border-t border-[#272727]/5 bg-[#111]">
           
           {/* Video Background */}
+          {/* @ts-ignore: defaultMuted is not in standard React types but is required for iOS Safari auto-play */}
           <video 
             autoPlay 
             loop 
