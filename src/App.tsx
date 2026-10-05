@@ -287,7 +287,13 @@ export default function App() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const menuImages = [1, 2, 3, 4, 5, 6];
 
+  const videoRef1 = useRef<HTMLVideoElement>(null);
+  const videoRef2 = useRef<HTMLVideoElement>(null);
+
   useEffect(() => {
+    if (videoRef1.current) videoRef1.current.defaultMuted = true;
+    if (videoRef2.current) videoRef2.current.defaultMuted = true;
+
     const timer = setTimeout(() => {
       setIsLoaded(true);
     }, 50);
@@ -331,12 +337,11 @@ export default function App() {
         <section id="home-section" className="w-full min-h-screen relative bg-[#FFFFF0] overflow-hidden z-20 cursor-pointer" onClick={scrollToMenu}>
           
           {/* Video Background */}
-          {/* @ts-ignore: defaultMuted is not in standard React types but is required for iOS Safari auto-play */}
           <video 
+            ref={videoRef1}
             autoPlay 
             loop 
             muted 
-            defaultMuted
             playsInline 
             className="absolute inset-0 w-full h-full object-cover z-0 opacity-90"
             src="/Images/bg video brown sugar caffe.mp4"
@@ -396,12 +401,11 @@ export default function App() {
         <section id="end-section" className="w-full h-[100dvh] min-h-[600px] flex flex-col justify-between items-center relative overflow-hidden z-30 shadow-[0_-20px_50px_rgba(0,0,0,0.05)] border-t border-[#272727]/5 bg-[#111]">
           
           {/* Video Background */}
-          {/* @ts-ignore: defaultMuted is not in standard React types but is required for iOS Safari auto-play */}
           <video 
+            ref={videoRef2}
             autoPlay 
             loop 
             muted 
-            defaultMuted
             playsInline 
             className="absolute inset-0 w-full h-full object-cover z-0"
             src="/Images/bg video brown sugar caffe End.mp4"
