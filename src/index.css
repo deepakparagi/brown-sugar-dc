@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brown-900: #1A1412;
+  --color-brown-800: #2A201A;
+  --color-brown-700: #3D2F25;
+  --color-brown-sugar: #D4AF37;
+  --color-glass: rgba(26, 20, 18, 0.45);
+  --color-glassBorder: rgba(255, 255, 255, 0.08);
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Montserrat", sans-serif;
+
+  --background-image-cafe-pattern: url('/Images/bg.png');
+}
+
+@layer base {
+  body {
+    background-color: #F1EADD;
+    color: #272727;
+    font-family: var(--font-sans);
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background-color: var(--color-glass);
+    border: 1px solid var(--color-glassBorder);
+    backdrop-filter: blur(24px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  }
+}
+
+/* Swiper custom styles */
+.swiper {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  border-radius: 1.5rem;
+  overflow: visible;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255,255,255,0.3) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #D4AF37 !important;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5) !important;
+}
