@@ -335,6 +335,7 @@ export default function App() {
             autoPlay 
             loop 
             muted 
+            defaultMuted
             playsInline 
             className="absolute inset-0 w-full h-full object-cover z-0 opacity-90"
             src="/Images/bg video brown sugar caffe.mp4"
@@ -398,6 +399,7 @@ export default function App() {
             autoPlay 
             loop 
             muted 
+            defaultMuted
             playsInline 
             className="absolute inset-0 w-full h-full object-cover z-0"
             src="/Images/bg video brown sugar caffe End.mp4"
