@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, X, Phone, MapPin } from 'lucide-react';
+import { ArrowLeft, X, Phone } from 'lucide-react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, Preload, ContactShadows, Float, Sparkles } from '@react-three/drei';
 import * as THREE from 'three';
@@ -133,7 +133,7 @@ const InstagramIcon = () => (
 );
 
 // 6. Unique 3D Scene for the Footer (Abstract Cafe Interior)
-function EndScene3D() {
+export function EndScene3D() {
   return (
     <Canvas camera={{ position: [0, 0, 10], fov: 40 }}>
       <CameraRig />
@@ -214,7 +214,7 @@ function EndScene3D() {
 }
 
 // Exact Recreation of the Reference 3D Scene
-function Scene3D() {
+export function Scene3D() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
