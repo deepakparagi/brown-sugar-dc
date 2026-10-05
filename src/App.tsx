@@ -37,7 +37,7 @@ function HangingLamp({ position }: any) {
 // 2. Slatted Wall (Terracotta)
 function SlattedWall({ position, rotation, scale }: any) {
   return (
-    <Float speed={2.5} rotationIntensity={0.1} floatIntensity={0.8} floatingRange={[-0.2, 0.2]} position={position}>
+    <Float speed={1} rotationIntensity={0.05} floatIntensity={0.3} floatingRange={[-0.05, 0.05]} position={position}>
       <group rotation={rotation} scale={scale}>
         {[0, 1, 2, 3, 4].map((i) => (
           <mesh key={i} position={[i * 0.4 - 0.8, 0, 0]} castShadow receiveShadow>
@@ -53,7 +53,7 @@ function SlattedWall({ position, rotation, scale }: any) {
 // 3. Background Capsule (Taupe)
 function BackgroundCapsule({ position, scale, rotation }: any) {
   return (
-    <Float speed={2} rotationIntensity={0.2} floatIntensity={1} floatingRange={[-0.3, 0.3]} position={position}>
+    <Float speed={0.8} rotationIntensity={0.1} floatIntensity={0.4} floatingRange={[-0.1, 0.1]} position={position}>
       <mesh scale={scale} rotation={rotation} receiveShadow>
         <capsuleGeometry args={[1, 3, 32, 32]} />
         <meshStandardMaterial color="#8a8177" roughness={0.9} />
@@ -73,7 +73,7 @@ function TexturedSphere({ position, scale }: any) {
     }
   });
   return (
-    <Float speed={3} rotationIntensity={0.5} floatIntensity={2} floatingRange={[-0.5, 0.5]} position={position}>
+    <Float speed={1.2} rotationIntensity={0.2} floatIntensity={0.6} floatingRange={[-0.15, 0.15]} position={position}>
       <mesh ref={mesh} scale={scale} castShadow receiveShadow>
         <sphereGeometry args={[1, 64, 64]} />
         <meshStandardMaterial color="#2d1712" roughness={1} metalness={0} />
@@ -85,7 +85,7 @@ function TexturedSphere({ position, scale }: any) {
 // 5. Abstract Plant (Dark Green)
 function AbstractPlant({ position, rotation, scale }: any) {
   return (
-    <Float speed={2.5} rotationIntensity={0.4} floatIntensity={1.5} floatingRange={[-0.4, 0.4]} position={position}>
+    <Float speed={1} rotationIntensity={0.15} floatIntensity={0.5} floatingRange={[-0.1, 0.1]} position={position}>
       <group rotation={rotation} scale={scale}>
         {/* Stem */}
         <mesh position={[0, 0, 0]} castShadow>
