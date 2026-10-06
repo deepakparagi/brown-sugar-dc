@@ -535,9 +535,9 @@ export default function App() {
             <div className="absolute top-4 right-4 md:top-8 md:right-8 z-50">
               <button 
                 onClick={() => setLightboxIndex(null)}
-                className="text-[#FFFFF0]/70 p-2 md:p-4 hover:text-white transition-all focus:outline-none hover:rotate-90 hover:scale-110 duration-500"
+                className="text-[#FFFFF0]/90 p-2 md:p-3 bg-black/40 backdrop-blur-md rounded-full hover:bg-black/60 hover:text-white transition-all focus:outline-none hover:rotate-90 hover:scale-110 duration-500 shadow-lg border border-white/10"
               >
-                <X strokeWidth={1} size={40} />
+                <X strokeWidth={2} size={24} />
               </button>
             </div>
             
@@ -552,12 +552,12 @@ export default function App() {
                 className="w-full h-full"
               >
                 {menuImages.map((num) => (
-                  <SwiperSlide key={num} className="box-border w-full h-full overflow-y-auto overflow-x-hidden px-12 md:px-24 py-20">
+                  <SwiperSlide key={num} className="box-border w-full h-full overflow-y-auto overflow-x-hidden px-2 md:px-24 py-16 md:py-20">
                     <div className="w-full min-h-full flex flex-col items-center justify-center">
                       <img 
                         src={num === 1 ? `/Images/01 updated.png` : `/Images/0${num}.png`} 
                         alt={`Menu Page ${num}`} 
-                        className="w-full h-auto max-w-full md:max-w-3xl mx-auto drop-shadow-2xl rounded-sm"
+                        className="w-full h-auto max-w-full md:max-w-3xl mx-auto drop-shadow-2xl rounded-lg md:rounded-xl"
                       />
                     </div>
                   </SwiperSlide>
@@ -568,37 +568,46 @@ export default function App() {
             {/* Swiper Custom CSS overrides for Lightbox */}
             <style>{`
               .swiper-button-next, .swiper-button-prev {
-                color: rgba(241, 234, 221, 0.7) !important;
-                background: transparent !important;
-                backdrop-filter: none;
-                box-shadow: none;
-                border-radius: 0 !important;
-                width: auto !important;
-                height: auto !important;
+                color: rgba(255, 255, 255, 0.9) !important;
+                background: rgba(0, 0, 0, 0.4) !important;
+                backdrop-filter: blur(8px);
+                border: 1px solid rgba(255,255,255,0.1);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                border-radius: 50% !important;
+                width: 44px !important;
+                height: 44px !important;
                 top: 50% !important;
-                bottom: auto !important;
-                margin-top: 0 !important;
                 transform: translateY(-50%) !important;
                 transition: all 0.3s ease;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
               }
               .swiper-button-next::after, .swiper-button-prev::after {
-                font-size: 28px !important;
-                font-weight: 300 !important;
+                font-size: 18px !important;
+                font-weight: 700 !important;
               }
-              .swiper-button-prev { left: 10px !important; }
-              .swiper-button-next { right: 10px !important; }
+              .swiper-button-prev { left: 12px !important; }
+              .swiper-button-next { right: 12px !important; }
               .swiper-button-next:hover, .swiper-button-prev:hover {
-                background: transparent !important;
+                background: rgba(0, 0, 0, 0.6) !important;
                 color: #ffffff !important;
-                transform: translateY(-50%) scale(1.2) !important;
+                transform: translateY(-50%) scale(1.1) !important;
               }
               .swiper-pagination-fraction {
-                color: rgba(241, 234, 221, 0.5) !important;
+                color: rgba(241, 234, 221, 0.7) !important;
                 font-family: var(--font-sans);
                 letter-spacing: 0.3em;
                 font-size: 0.7rem;
                 bottom: 24px !important;
-                font-weight: 400;
+                font-weight: 500;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(4px);
+                padding: 4px 12px;
+                border-radius: 20px;
+                width: auto !important;
+                left: 50% !important;
+                transform: translateX(-50%);
               }
             `}</style>
           </motion.div>
