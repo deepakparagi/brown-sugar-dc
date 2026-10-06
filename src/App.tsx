@@ -447,7 +447,7 @@ export default function App() {
             
             <div className="mt-8 flex flex-col items-center gap-5">
               <a 
-                href="https://maps.app.goo.gl/zE5HSRMoQZwxzLvh6" 
+                href="https://maps.app.goo.gl/ps15pnfW3pKsJzWc8" 
                 target="_blank" 
                 rel="noreferrer"
                 className="flex items-center gap-3 text-[#FFFFF0] hover:text-[#FFFFF0] transition-colors duration-300 group bg-[#1a1412]/60 backdrop-blur-md px-6 py-2 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#b35c39]/30 hover:border-[#b35c39]/80"
