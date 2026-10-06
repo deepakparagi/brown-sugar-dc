@@ -447,7 +447,7 @@ export default function App() {
             
             <div className="mt-8 flex flex-col items-center gap-5">
               <a 
-                href="https://maps.app.goo.gl/ps15pnfW3pKsJzWc8" 
+                href="https://www.google.com/maps?sca_esv=b44634d0b9d75b78&output=search&q=brown+sugar+cafe+gadag&source=lnms&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8cTs4PJElQ4Z4ROUfAdKhH1s1TzWjRqm_NBkfHz-gLe8NZ2qUVnJ_NMm_1swaK1ZUox_YqraszqbmMq6Cjdk69kRNyuBXGws6vz83BxaZWfYAaChmqwLT96Mfv1esgxe8cEl2ovwPU7k_30J4rvY-s6QnpGaxBIT7He3mlQfeodDiQNjwT_siBWvtm8tYLq0IOLNNOtw&entry=mc&ved=1t:200715&ictx=111" 
                 target="_blank" 
                 rel="noreferrer"
                 className="flex items-center gap-3 text-[#FFFFF0] hover:text-[#FFFFF0] transition-colors duration-300 group bg-[#1a1412]/60 backdrop-blur-md px-6 py-2 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#b35c39]/30 hover:border-[#b35c39]/80"
