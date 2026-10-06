@@ -568,42 +568,64 @@ export default function App() {
             {/* Swiper Custom CSS overrides for Lightbox */}
             <style>{`
               .swiper-button-next, .swiper-button-prev {
-                color: rgba(255, 255, 255, 0.9) !important;
-                background: rgba(0, 0, 0, 0.4) !important;
-                backdrop-filter: blur(8px);
-                border: 1px solid rgba(255,255,255,0.1);
-                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                color: transparent !important;
+                background: rgba(26, 20, 18, 0.6) !important;
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.5);
                 border-radius: 50% !important;
                 width: 44px !important;
                 height: 44px !important;
                 top: 50% !important;
                 transform: translateY(-50%) !important;
-                transition: all 0.3s ease;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
                 display: flex !important;
                 align-items: center !important;
                 justify-content: center !important;
               }
               .swiper-button-next::after, .swiper-button-prev::after {
-                font-size: 18px !important;
-                font-weight: 700 !important;
+                content: '' !important;
+                width: 10px !important;
+                height: 10px !important;
+                border: solid rgba(255, 255, 255, 0.85) !important;
+                border-width: 0 2px 2px 0 !important;
+                display: inline-block !important;
+                padding: 0 !important;
+                border-radius: 0.5px !important;
+                transition: all 0.3s ease;
               }
-              .swiper-button-prev { left: 12px !important; }
-              .swiper-button-next { right: 12px !important; }
+              .swiper-button-next::after {
+                transform: rotate(-45deg) !important;
+                margin-right: 4px !important;
+              }
+              .swiper-button-prev::after {
+                transform: rotate(135deg) !important;
+                margin-left: 4px !important;
+              }
+              .swiper-button-prev { left: 16px !important; }
+              .swiper-button-next { right: 16px !important; }
               .swiper-button-next:hover, .swiper-button-prev:hover {
-                background: rgba(0, 0, 0, 0.6) !important;
-                color: #ffffff !important;
+                background: rgba(179, 92, 57, 0.9) !important;
+                border-color: rgba(179, 92, 57, 1);
                 transform: translateY(-50%) scale(1.1) !important;
               }
+              .swiper-button-next:hover::after, .swiper-button-prev:hover::after {
+                border-color: #ffffff !important;
+              }
               .swiper-pagination-fraction {
-                color: rgba(241, 234, 221, 0.7) !important;
+                color: rgba(241, 234, 221, 0.8) !important;
                 font-family: var(--font-sans);
                 letter-spacing: 0.3em;
                 font-size: 0.7rem;
                 bottom: 24px !important;
                 font-weight: 500;
-                background: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(4px);
-                padding: 4px 12px;
+                background: rgba(26, 20, 18, 0.6);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+                padding: 6px 16px;
                 border-radius: 20px;
                 width: auto !important;
                 left: 50% !important;
