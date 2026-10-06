@@ -597,11 +597,11 @@ export default function App() {
               }
               .swiper-button-next::after {
                 transform: rotate(-45deg) !important;
-                margin-right: 4px !important;
+                margin-left: 2px !important;
               }
               .swiper-button-prev::after {
                 transform: rotate(135deg) !important;
-                margin-left: 4px !important;
+                margin-right: 2px !important;
               }
               .swiper-button-prev { left: 16px !important; }
               .swiper-button-next { right: 16px !important; }
