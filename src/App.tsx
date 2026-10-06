@@ -586,22 +586,23 @@ export default function App() {
               }
               .swiper-button-next::after, .swiper-button-prev::after {
                 content: '' !important;
-                width: 10px !important;
-                height: 10px !important;
+                width: 12px !important;
+                height: 12px !important;
                 border: solid rgba(255, 255, 255, 0.85) !important;
                 border-width: 0 2px 2px 0 !important;
-                display: inline-block !important;
                 padding: 0 !important;
                 border-radius: 0.5px !important;
                 transition: all 0.3s ease;
+                position: absolute !important;
+                top: 50% !important;
+                left: 50% !important;
+                margin: 0 !important;
               }
               .swiper-button-next::after {
-                transform: rotate(-45deg) !important;
-                margin-left: 2px !important;
+                transform: translate(-40%, -50%) rotate(-45deg) !important;
               }
               .swiper-button-prev::after {
-                transform: rotate(135deg) !important;
-                margin-right: 2px !important;
+                transform: translate(-60%, -50%) rotate(135deg) !important;
               }
               .swiper-button-prev { left: 16px !important; }
               .swiper-button-next { right: 16px !important; }
