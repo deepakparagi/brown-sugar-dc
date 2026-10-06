@@ -386,7 +386,7 @@ export default function App() {
               >
                 <div className="w-full h-auto rounded-[8px] overflow-hidden relative shadow-[0_30px_60px_rgba(39,39,39,0.15)] transition-transform duration-700 bg-white border border-[#272727]/5 group-hover:scale-[1.02]">
                   <img 
-                    src={num === 1 ? `/Images/01 updated.png` : `/Images/0${num}.png`} 
+                    src={[1, 2].includes(num) ? `/Images/0${num} updated.png` : `/Images/0${num}.png`} 
                     alt={`Menu Page ${num}`} 
                     className="w-full h-auto object-contain block"
                   />
@@ -555,7 +555,7 @@ export default function App() {
                   <SwiperSlide key={num} className="box-border w-full h-full overflow-y-auto overflow-x-hidden px-2 md:px-24 py-16 md:py-20">
                     <div className="w-full min-h-full flex flex-col items-center justify-center">
                       <img 
-                        src={num === 1 ? `/Images/01 updated.png` : `/Images/0${num}.png`} 
+                        src={[1, 2].includes(num) ? `/Images/0${num} updated.png` : `/Images/0${num}.png`} 
                         alt={`Menu Page ${num}`} 
                         className="w-full h-auto max-w-full md:max-w-3xl mx-auto drop-shadow-2xl rounded-lg md:rounded-xl"
                       />
