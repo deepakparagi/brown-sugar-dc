@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, X, Phone } from 'lucide-react';
+import { ArrowLeft, X, Phone, MapPin } from 'lucide-react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, Preload, ContactShadows, Float, Sparkles } from '@react-three/drei';
 import * as THREE from 'three';
@@ -446,6 +446,20 @@ export default function App() {
             </div>
             
             <div className="mt-8 flex flex-col items-center gap-5">
+              <a 
+                href="https://maps.app.goo.gl/zE5HSRMoQZwxzLvh6" 
+                target="_blank" 
+                rel="noreferrer"
+                className="flex items-center gap-3 text-[#FFFFF0] hover:text-[#FFFFF0] transition-colors duration-300 group bg-[#1a1412]/60 backdrop-blur-md px-6 py-2 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#b35c39]/30 hover:border-[#b35c39]/80"
+              >
+                <div className="p-1.5 border border-[#b35c39]/60 rounded-full group-hover:border-[#b35c39] transition-colors duration-300 bg-[#b35c39]/20 text-[#b35c39] group-hover:bg-[#b35c39] group-hover:text-[#FFFFF0] drop-shadow-md">
+                  <MapPin size={20} />
+                </div>
+                <span className="font-sans tracking-[0.15em] text-[0.6rem] md:text-[0.7rem] uppercase font-bold">
+                  Get <span className="text-[#b35c39] font-black drop-shadow-md group-hover:text-[#FFFFF0] transition-colors duration-300">Directions</span>
+                </span>
+              </a>
+
               <a 
                 href="https://www.instagram.com/brownsugarfusioncafe/?hl=en" 
                 target="_blank" 
