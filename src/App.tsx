@@ -488,33 +488,33 @@ export default function App() {
           <div className="flex-1 w-full z-10 pointer-events-none"></div>
 
           {/* Bottom Credits */}
-          <div className="w-full z-10 px-4 py-6 md:py-8 flex flex-col lg:flex-row justify-between items-center gap-4 md:gap-8 bg-gradient-to-b from-[#0a0a0a]/90 to-[#000000] shrink-0 font-sans backdrop-blur-2xl relative overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t border-[#FFFFF0]/5">
+          <div className="w-full z-10 px-6 py-8 flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-8 bg-gradient-to-b from-[#0a0a0a]/90 to-[#000000] shrink-0 font-sans backdrop-blur-2xl relative overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t border-[#FFFFF0]/5">
             {/* Subtle top glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] h-[1px] bg-gradient-to-r from-transparent via-[#b35c39]/50 to-transparent"></div>
             
-            <div className="text-[#FFFFF0]/40 tracking-[0.25em] text-[0.5rem] md:text-[0.6rem] uppercase font-bold flex items-center gap-2">
-              <span className="text-[#b35c39] text-[0.6rem]">©</span> {new Date().getFullYear()} Brown Sugar Fusion Cafe
+            <div className="text-[#FFFFF0]/50 tracking-[0.2em] text-[0.6rem] md:text-[0.65rem] uppercase font-bold flex items-center justify-center gap-2 w-full lg:w-auto text-center order-1 lg:order-none">
+              <span className="text-[#b35c39] text-[0.7rem] md:text-[0.75rem]">©</span> {new Date().getFullYear()} Brown Sugar Fusion Cafe
             </div>
             
-            <div className="text-[#FFFFF0]/50 tracking-[0.2em] text-[0.5rem] md:text-[0.6rem] uppercase flex flex-col md:flex-row items-center gap-3 md:gap-8 text-center font-bold">
-              <span className="flex flex-col md:flex-row items-center gap-1.5 md:gap-2">
-                Designed & Developed by
+            <div className="text-[#FFFFF0]/50 tracking-[0.2em] text-[0.6rem] md:text-[0.65rem] uppercase flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 lg:gap-8 w-full lg:w-auto text-center font-bold order-2 lg:order-none">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-1.5 md:gap-2">
+                <span className="text-[#FFFFF0]/40">Designed & Developed by</span>
                 <a 
                   href="https://deepcipher-studio.vercel.app" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="relative group text-[#FFFFF0] tracking-[0.25em] md:ml-1 mt-0.5 md:mt-0"
+                  className="relative group text-[#FFFFF0] tracking-[0.25em] mt-1 md:mt-0"
                 >
-                  <span className="relative z-10 group-hover:text-[#b35c39] transition-colors duration-500">DEEPCIPHER</span>
+                  <span className="relative z-10 group-hover:text-[#b35c39] transition-colors duration-500 font-extrabold">DEEPCIPHER</span>
                   <span className="absolute -bottom-1 left-0 w-full h-[1px] bg-[#b35c39]/30 group-hover:bg-[#b35c39] transition-all duration-500"></span>
                   <span className="absolute -inset-2 bg-[#b35c39]/0 group-hover:bg-[#b35c39]/10 blur-md rounded-lg transition-all duration-500 -z-10"></span>
                 </a>
-              </span>
-              <span className="hidden md:inline w-[3px] h-[3px] rounded-full bg-[#FFFFF0]/20"></span>
-              <span className="flex items-center gap-1.5 md:gap-2">
+              </div>
+              <span className="hidden md:block w-[4px] h-[4px] rounded-full bg-[#FFFFF0]/20"></span>
+              <div className="flex flex-row items-center justify-center gap-2 mt-2 md:mt-0">
                 <span className="text-[#FFFFF0]/30 tracking-[0.2em]">Agency Contact</span> 
-                <span className="text-[#b35c39] tracking-[0.15em] ml-0.5 drop-shadow-md">+91 9187360830</span>
-              </span>
+                <span className="text-[#b35c39] tracking-[0.15em] drop-shadow-md font-extrabold">+91 9187360830</span>
+              </div>
             </div>
           </div>
         </section>
