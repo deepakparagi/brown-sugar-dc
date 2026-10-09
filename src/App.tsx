@@ -5,10 +5,11 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, Preload, ContactShadows, Float, Sparkles } from '@react-three/drei';
 import * as THREE from 'three';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Keyboard } from 'swiper/modules';
+import { Navigation, Pagination, Keyboard, Zoom } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/zoom';
 
 // 1. Hanging Lamp
 function HangingLamp({ position }: any) {
@@ -551,17 +552,20 @@ export default function App() {
                 navigation={true}
                 pagination={{ type: 'fraction' }}
                 keyboard={{ enabled: true }}
-                modules={[Navigation, Pagination, Keyboard]}
+                zoom={{ maxRatio: 3 }}
+                modules={[Navigation, Pagination, Keyboard, Zoom]}
                 className="w-full h-full"
               >
                 {menuImages.map((num) => (
                   <SwiperSlide key={num} className="box-border w-full h-full overflow-y-auto overflow-x-hidden px-2 md:px-24 py-16 md:py-20">
                     <div className="w-full min-h-full flex flex-col items-center justify-center">
-                      <img 
-                        src={num === 1 ? `/Images/01 updated (2).png` : num === 2 ? `/Images/02 updated.png` : `/Images/0${num}.png`} 
-                        alt={`Menu Page ${num}`} 
-                        className="w-full h-auto max-w-full md:max-w-3xl mx-auto drop-shadow-2xl rounded-lg md:rounded-xl"
-                      />
+                      <div className="swiper-zoom-container">
+                        <img 
+                          src={num === 1 ? `/Images/01 updated (2).png` : num === 2 ? `/Images/02 updated.png` : `/Images/0${num}.png`} 
+                          alt={`Menu Page ${num}`} 
+                          className="w-full h-auto max-w-full md:max-w-3xl mx-auto drop-shadow-2xl rounded-lg md:rounded-xl"
+                        />
+                      </div>
                     </div>
                   </SwiperSlide>
                 ))}
