@@ -398,7 +398,7 @@ export default function App() {
         </section>
 
         {/* ======================= END SECTION ======================= */}
-        <section id="end-section" className="w-full h-[100dvh] min-h-[600px] flex flex-col justify-between items-center relative overflow-hidden z-30 shadow-[0_-20px_50px_rgba(0,0,0,0.05)] border-t border-[#272727]/5 bg-[#111]">
+        <section id="end-section" className="w-full min-h-[100dvh] flex flex-col justify-between items-center relative overflow-hidden z-30 shadow-[0_-20px_50px_rgba(0,0,0,0.05)] border-t border-[#272727]/5 bg-[#111]">
           
           {/* Video Background */}
           <video 
@@ -488,7 +488,7 @@ export default function App() {
           <div className="flex-1 w-full z-10 pointer-events-none"></div>
 
           {/* Bottom Credits */}
-          <div className="w-full z-10 px-6 py-8 flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-8 bg-gradient-to-b from-[#0a0a0a]/90 to-[#000000] shrink-0 font-sans backdrop-blur-2xl relative overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t border-[#FFFFF0]/5">
+          <div className="w-full z-10 px-6 py-8 pb-12 md:pb-8 flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-8 bg-gradient-to-b from-[#0a0a0a]/90 to-[#000000] shrink-0 font-sans backdrop-blur-2xl relative overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t border-[#FFFFF0]/5">
             {/* Subtle top glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] h-[1px] bg-gradient-to-r from-transparent via-[#b35c39]/50 to-transparent"></div>
             
