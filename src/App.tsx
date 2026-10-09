@@ -398,7 +398,7 @@ export default function App() {
         </section>
 
         {/* ======================= END SECTION ======================= */}
-        <section id="end-section" className="w-full min-h-[100dvh] flex flex-col justify-between items-center relative overflow-hidden z-30 shadow-[0_-20px_50px_rgba(0,0,0,0.05)] border-t border-[#272727]/5 bg-[#111]">
+        <section id="end-section" className="w-full h-[100dvh] flex flex-col justify-between items-center relative overflow-hidden z-30 shadow-[0_-20px_50px_rgba(0,0,0,0.05)] border-t border-[#272727]/5 bg-[#111]">
           
           {/* Video Background */}
           <video 
@@ -422,30 +422,30 @@ export default function App() {
             <img 
               src="/Images/bg original.png" 
               alt="Logo" 
-              className="w-44 md:w-64 mb-6 md:mb-8 drop-shadow-2xl" 
+              className="w-32 md:w-64 mb-3 md:mb-8 drop-shadow-2xl" 
             />
 
-            <h2 className="font-serif text-[3.5rem] md:text-[6.5rem] leading-[0.9] text-[#FFFFF0] font-medium tracking-wide mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.3)]">
+            <h2 className="font-serif text-[3rem] md:text-[6.5rem] leading-[0.9] text-[#FFFFF0] font-medium tracking-wide mb-3 md:mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.3)]">
               THANK<br/>
               <span className="text-[#b35c39]">YOU</span>
             </h2>
             
-            <p className="font-sans text-[#FFFFF0] tracking-[0.2em] text-[0.65rem] md:text-[0.75rem] uppercase leading-relaxed max-w-[300px] md:max-w-md font-bold bg-[#1a1412]/60 backdrop-blur-md px-6 py-4 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#FFFFF0]/10">
+            <p className="font-sans text-[#FFFFF0] tracking-[0.2em] text-[0.6rem] md:text-[0.75rem] uppercase leading-relaxed max-w-[300px] md:max-w-md font-bold bg-[#1a1412]/60 backdrop-blur-md px-6 py-3 md:py-4 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#FFFFF0]/10">
               We hope you enjoyed your <span className="text-[#b35c39] drop-shadow-lg">fusion experience.</span>
             </p>
 
-            <div className="mt-5 flex flex-col items-center gap-2 font-sans text-[#FFFFF0] tracking-[0.1em] text-[0.6rem] md:text-[0.7rem] leading-relaxed text-center font-bold bg-[#1a1412]/60 backdrop-blur-md px-6 py-5 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#FFFFF0]/10 max-w-[90%] md:max-w-md">
-              <div className="flex flex-col items-center justify-center gap-1 mb-1">
+            <div className="mt-3 md:mt-5 flex flex-col items-center gap-1 md:gap-2 font-sans text-[#FFFFF0] tracking-[0.1em] text-[0.6rem] md:text-[0.7rem] leading-relaxed text-center font-bold bg-[#1a1412]/60 backdrop-blur-md px-6 py-3 md:py-5 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#FFFFF0]/10 max-w-[90%] md:max-w-md">
+              <div className="flex flex-col items-center justify-center gap-0.5 md:gap-1 mb-1">
                 <span className="uppercase tracking-[0.15em] text-[#b35c39] font-extrabold drop-shadow-lg">Datta Prime Business Centre</span>
                 <span className="uppercase text-[#FFFFF0]/90 font-medium">Beside Dominos, Mulgund Road, Gadag</span>
               </div>
-              <div className="flex items-center justify-center gap-2 text-[#b35c39] mt-2">
+              <div className="flex items-center justify-center gap-2 text-[#b35c39] mt-1 md:mt-2">
                 <Phone size={14} className="drop-shadow-lg" />
-                <span className="text-[#FFFFF0] font-black text-[0.85rem] md:text-[1.1rem] tracking-[0.15em] drop-shadow-lg">8884909098, 9886031113</span>
+                <span className="text-[#FFFFF0] font-black text-[0.8rem] md:text-[1.1rem] tracking-[0.15em] drop-shadow-lg">8884909098, 9886031113</span>
               </div>
             </div>
             
-            <div className="mt-8 flex flex-col items-center gap-5">
+            <div className="mt-4 md:mt-8 flex flex-col items-center gap-3 md:gap-5">
               <a 
                 href="https://www.google.com/maps?sca_esv=b44634d0b9d75b78&output=search&q=brown+sugar+cafe+gadag&source=lnms&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8cTs4PJElQ4Z4ROUfAdKhH1s1TzWjRqm_NBkfHz-gLe8NZ2qUVnJ_NMm_1swaK1ZUox_YqraszqbmMq6Cjdk69kRNyuBXGws6vz83BxaZWfYAaChmqwLT96Mfv1esgxe8cEl2ovwPU7k_30J4rvY-s6QnpGaxBIT7He3mlQfeodDiQNjwT_siBWvtm8tYLq0IOLNNOtw&entry=mc&ved=1t:200715&ictx=111" 
                 target="_blank" 
@@ -489,32 +489,32 @@ export default function App() {
 
           {/* Bottom Credits */}
           <div 
-            className="w-full z-10 px-4 sm:px-6 pt-8 pb-12 md:pb-8 flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-8 bg-gradient-to-b from-[#0a0a0a]/90 to-[#000000] shrink-0 font-sans backdrop-blur-2xl relative overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t border-[#FFFFF0]/5"
-            style={{ paddingBottom: 'calc(3rem + env(safe-area-inset-bottom))' }}
+            className="w-full z-10 px-4 sm:px-6 pt-4 md:pt-8 pb-12 md:pb-8 flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-8 bg-gradient-to-b from-[#0a0a0a]/90 to-[#000000] shrink-0 font-sans backdrop-blur-2xl relative overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t border-[#FFFFF0]/5"
+            style={{ paddingBottom: 'calc(1.5rem + env(safe-area-inset-bottom))' }}
           >
             {/* Subtle top glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] h-[1px] bg-gradient-to-r from-transparent via-[#b35c39]/50 to-transparent"></div>
             
-            <div className="text-[#FFFFF0]/50 tracking-[0.2em] text-[0.6rem] md:text-[0.65rem] uppercase font-bold flex items-center justify-center gap-2 w-full lg:w-auto text-center order-1 lg:order-none">
-              <span className="text-[#b35c39] text-[0.7rem] md:text-[0.75rem]">©</span> {new Date().getFullYear()} Brown Sugar Fusion Cafe
+            <div className="text-[#FFFFF0]/50 tracking-[0.2em] text-[0.55rem] md:text-[0.65rem] uppercase font-bold flex items-center justify-center gap-2 w-full lg:w-auto text-center order-1 lg:order-none">
+              <span className="text-[#b35c39] text-[0.6rem] md:text-[0.75rem]">©</span> {new Date().getFullYear()} Brown Sugar Fusion Cafe
             </div>
             
-            <div className="text-[#FFFFF0]/50 tracking-[0.2em] text-[0.6rem] md:text-[0.65rem] uppercase flex flex-col md:flex-row items-center justify-center gap-5 md:gap-6 lg:gap-8 w-full lg:w-auto text-center font-bold order-2 lg:order-none">
-              <div className="flex flex-col md:flex-row items-center justify-center gap-1.5 md:gap-2">
+            <div className="text-[#FFFFF0]/50 tracking-[0.2em] text-[0.55rem] md:text-[0.65rem] uppercase flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 lg:gap-8 w-full lg:w-auto text-center font-bold order-2 lg:order-none">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2">
                 <span className="text-[#FFFFF0]/40">Designed & Developed by</span>
                 <a 
                   href="https://deepcipher-studio.vercel.app" 
                   target="_blank" 
                   rel="noreferrer"
-                  className="relative group text-[#FFFFF0] tracking-[0.25em] mt-1.5 md:mt-0"
+                  className="relative group text-[#FFFFF0] tracking-[0.25em] mt-1 md:mt-0"
                 >
-                  <span className="relative z-10 group-hover:text-[#b35c39] transition-colors duration-500 font-extrabold text-[0.65rem] md:text-[0.7rem]">DEEPCIPHER</span>
+                  <span className="relative z-10 group-hover:text-[#b35c39] transition-colors duration-500 font-extrabold text-[0.6rem] md:text-[0.7rem]">DEEPCIPHER</span>
                   <span className="absolute -bottom-1 left-0 w-full h-[1px] bg-[#b35c39]/30 group-hover:bg-[#b35c39] transition-all duration-500"></span>
                   <span className="absolute -inset-2 bg-[#b35c39]/0 group-hover:bg-[#b35c39]/10 blur-md rounded-lg transition-all duration-500 -z-10"></span>
                 </a>
               </div>
               <span className="hidden md:block w-[4px] h-[4px] rounded-full bg-[#FFFFF0]/20"></span>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-1.5 md:gap-2 mt-3 md:mt-0">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 mt-2 md:mt-0">
                 <span className="text-[#FFFFF0]/30 tracking-[0.2em]">Agency Contact</span> 
                 <span className="text-[#b35c39] tracking-[0.15em] drop-shadow-md font-extrabold mt-0.5 md:mt-0">+91 9187360830</span>
               </div>
